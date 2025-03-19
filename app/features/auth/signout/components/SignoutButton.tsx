@@ -19,7 +19,7 @@ function SignoutButton() {
     });
   };
   return (
-    <button onClick={handleSignout} className="btn">
+    <button onClick={handleSignout} className="w-full h-full text-zinc-500 hover:bg-zinc-200/50 cursor-pointer transition-colors ">
       Sair
     </button>
   );

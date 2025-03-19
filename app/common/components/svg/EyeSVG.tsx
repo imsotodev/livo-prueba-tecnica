@@ -5,7 +5,7 @@ function EyeSVG() {
       data-name="Capa 2"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 25 21.34"
-      className="size-5"
+      className="size-2 rotate-90"
     >
       <g id="Capa_1-2" data-name="Capa 1">
         <g>
