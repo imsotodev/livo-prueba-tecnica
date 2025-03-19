@@ -1,11 +1,11 @@
 import HomeHeader from "./components/header/HomeHeader";
-import ProductItem from "./components/product/ProductItem";
+import ProductList from "./components/product/ProductList";
 
 function HomePage() {
   return (
     <main>
       <HomeHeader />
-      <ProductItem />
+      <ProductList />
     </main>
   );
 }

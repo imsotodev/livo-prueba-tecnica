@@ -1,6 +1,7 @@
 import type { SigninSchema } from "~/features/auth/schemas/SigninFormSchema";
 import http from "./config";
 import type { AxiosError } from "axios";
+import type { APIResponse } from "../entity/auth";
 
 export const signin = async (userdata: SigninSchema) => {
   try {
@@ -19,9 +20,4 @@ export const signout = async () => {
   } catch (error) {
     return error as AxiosError;
   }
-};
-
-export type APIResponse = {
-  token: string;
-  user_id: string;
 };
