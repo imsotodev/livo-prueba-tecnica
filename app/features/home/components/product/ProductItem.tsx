@@ -1,20 +1,29 @@
-import CameraSVG from "~/common/components/svg/CAmeraSVG";
-import LivoGlassesFront from "~/assets/livo-glasses-front.png";
+import CameraSVG from "~/common/components/svg/CameraSVG";
 import { addToCart } from "~/common/api/cart";
+import type { Product } from "~/common/entity/product";
+import ProductColors from "./ProductColors";
+import ProductImages from "./ProductImages";
 
-function ProductItem() {
+interface props {
+  product: Product;
+}
+function ProductItem({ product }: props) {
+  const color1 = product.attributes[8]?.value_attribute_option_1 || null;
+  const color2 = product.attributes[8]?.value_attribute_option_2 || null;
+  const [name, color] = product.name.split(" - ");
+  const price = product.price.toFixed(2);
+  const partPrice = (product.price / 6).toFixed(2);
+
+  console.log(product.special_price);
+
   const handleAddToCart = () => {
-    addToCart({
-      id: 1,
-      name: "Livo",
-      price: 599,
-      quantity: 1,
-    });
+    addToCart(product.sku);
   };
+
   return (
     <div>
-      <div className="relative bg-zinc-100 aspect-square p-5 flex flex-col gap-5">
-        <div className="flex items-center justify-between">
+      <div className="relative bg-zinc-100 aspect-square p-5 flex flex-col">
+        <div className="flex items-center justify-between mb-2">
           <div className="flex gap-1 items-center">
             <CameraSVG />
             <small className="font-light text-sm">Provador virtual</small>
@@ -24,32 +33,25 @@ function ProductItem() {
           </div>
         </div>
         <div>
-          <div className="grid place-content-center">
+          <div className="grid place-content-center h-9">
             <span className="bg-primary rounded-full px-5 py-1.5 text-center text-white">
               Gratis, Comprando lentes LIVO
             </span>
           </div>
         </div>
         <div>
-          <img src={LivoGlassesFront} alt="" />
+          <ProductImages images={product.images} />
         </div>
-        <div className="flex items-center justify-center gap-2">
-          {Array.from({ length: 5 }).map((_, index) => (
-            <div key={index} className="bg-zinc-300 rounded-full size-10"></div>
-          ))}
-          <div className="bg-white grid place-content-center text-xl rounded-full size-10">
-            +1
-          </div>
-        </div>
+        <ProductColors color1={color1} color2={color2} />
       </div>
       <div className="p-5">
         <div className="flex items-center justify-between">
-          <span>ART</span>
-          <span>R$ 599,00</span>
+          <span className="uppercase">{name}</span>
+          <span>R$ {price}</span>
         </div>
         <div className="flex items-center justify-between text-primary text-sm font-light">
-          <span>CARAMELO</span>
-          <span>6x R$ 99,83</span>
+          <span className="uppercase">{color}</span>
+          <span>6x R$ {partPrice}</span>
         </div>
         <div className="grid place-content-center mt-5">
           <button
