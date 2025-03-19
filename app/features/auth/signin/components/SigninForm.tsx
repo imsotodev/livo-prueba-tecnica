@@ -43,7 +43,7 @@ function SigninForm() {
   return (
     <>
       <form autoComplete="off" onSubmit={handleSubmit(handleSignin)}>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 px-5">
           <InputGroup
             type="text"
             placeholder="Escreva seu nome de usuário"
