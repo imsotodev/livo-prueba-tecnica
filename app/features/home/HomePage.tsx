@@ -1,9 +1,11 @@
-
+import HomeHeader from "./components/header/HomeHeader";
 
 function HomePage() {
   return (
-    <div>HomePage</div>
-  )
+    <main>
+      <HomeHeader />
+    </main>
+  );
 }
 
-export default HomePage
+export default HomePage;
