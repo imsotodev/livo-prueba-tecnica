@@ -12,6 +12,15 @@ export const signin = async (userdata: SigninSchema) => {
   }
 };
 
+export const signout = async () => {
+  try {
+    const { data } = await http.post("/account/logout/");
+    return data;
+  } catch (error) {
+    return error as AxiosError;
+  }
+};
+
 export type APIResponse = {
   token: string;
   user_id: string;
