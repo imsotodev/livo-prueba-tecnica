@@ -3,7 +3,7 @@ import { Outlet, useSearchParams } from "react-router";
 import { toast, Toaster } from "sonner";
 
 function ScreenLayout() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   useEffect(() => {
     if (searchParams.get("error") === "nao-autorizado") {
       toast.error("Você não está autorizado, Conecte-se.");
