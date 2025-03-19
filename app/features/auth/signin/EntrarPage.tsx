@@ -1,5 +1,11 @@
+// import SigninForm from "./components/SigninForm";
+
 function EntrarPage() {
-  return <div>EntrarPage</div>;
+  return (
+    <main>
+     entrar pagina
+    </main>
+  );
 }
 
 export default EntrarPage;
