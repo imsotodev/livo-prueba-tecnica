@@ -18,7 +18,7 @@ body {
   @apply opacity-50 transition-opacity cursor-not-allowed hover:shadow-none;
 }
 .input {
-  @apply px-2 py-1 w-full flex-1 outline-none caret-primary text-zinc-600 text-lg;
+  @apply px-4 py-1 w-full flex-1 outline-none caret-primary text-zinc-600 text-lg;
 }
 .input:disabled {
   @apply cursor-not-allowed;

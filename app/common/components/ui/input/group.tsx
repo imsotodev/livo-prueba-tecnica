@@ -22,7 +22,7 @@ const InputGroup = forwardRef<HTMLInputElement, InputProps>(
     const bottomMessage = errors?.message ?? "";
     return (
       <div className="flex flex-col">
-        <label className="input-label" htmlFor={props.id}>
+        <label className="input-label ml-3" htmlFor={props.id}>
           {label}
         </label>
         <div className="input-group">
