@@ -1,8 +1,10 @@
 import CameraSVG from "~/common/components/svg/CameraSVG";
-import { addToCart } from "~/common/api/cart";
+
 import type { Product } from "~/common/entity/product";
 import ProductColors from "./ProductColors";
 import ProductImages from "./ProductImages";
+import { toast } from "sonner";
+import useCartQuery from "~/common/hooks/useCartQuery";
 
 interface props {
   product: Product;
@@ -14,8 +16,20 @@ function ProductItem({ product }: props) {
   const price = product.price.toFixed(2);
   const partPrice = (product.price / 6).toFixed(2);
 
+  const { addToCart } = useCartQuery();
+
   const handleAddToCart = () => {
-    addToCart(product.sku);
+    toast.promise(addToCart(product.sku), {
+      loading: "Adicionando ao carrinho...",
+      success: (res) => {
+        console.log(res);
+        return "Produto adicionado ao carrinho";
+      },
+      error: (err) => {
+        console.log(err);
+        return "Erro ao adicionar ao carrinho";
+      },
+    });
   };
 
   return (

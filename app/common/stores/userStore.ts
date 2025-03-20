@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { APIResponse } from "../api/user";
+import type { APIResponse } from "../entity/auth";
 
 type userStoreType = {
   user: APIResponse | null;

@@ -2,7 +2,6 @@ export interface ProductAPIResponse {
   data: Product[];
   pagination: Pagination;
 }
-
 export interface Product {
   entity_id: number;
   similar_products?: Product[];

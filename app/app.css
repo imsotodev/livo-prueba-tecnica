@@ -3,7 +3,7 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-  --color-primary:oklch(78.93% 0.0747 232.9);
+  --color-primary: oklch(78.93% 0.0747 232.9);
   --font-poppins: Poppins, sans-serif;
 }
 
@@ -48,4 +48,22 @@ body {
   border-width: 10px;
   border-style: solid;
   border-color: transparent transparent #f4f4f5 transparent; /* Flecha apuntando hacia arriba */
+}
+/* bottom-0 bg-white transition-all fixed top-0 min-w-sm max-w-md w-full z-10 items-center left-[50%] translate-x-[-50%] */
+.modal {
+  @apply bg-white w-full duration-300 ease-in-out top-0 left-[50%] translate-x-[-50%] transition-transform fixed bottom-0 max-w-md min-w-sm;
+}
+
+.hidde {
+  @apply right-0 translate-x-[250%];
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-zinc-100
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary border border-zinc-100;
 }

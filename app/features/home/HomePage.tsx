@@ -1,7 +1,7 @@
-import HomeHeader from "./components/header/HomeHeader";
-import ProductFilter from "./components/product/ProductFilter";
-import ProductList from "./components/product/ProductList";
-import ProductPagination from "./components/product/ProductPagination";
+import ProductFilter from "../product/ProductFilter";
+import ProductList from "../product/ProductList";
+import ProductPagination from "../product/ProductPagination";
+import HomeHeader from "./components/HomeHeader";
 
 function HomePage() {
   return (
