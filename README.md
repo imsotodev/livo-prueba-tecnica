@@ -24,8 +24,6 @@ La aplicación se conecta a una API REST para gestionar la autenticación, así 
 
 ## Ejecución
 
-por defecto se ejecutó con `pnpm` para user otro gestor elimina el `pnpm-lock.yaml` y sigue los pasos
-
 1. Clona el repositorio
 ```bash
 git clone https://github.com/imsotodev/livo-prueba-tecnica.git
@@ -34,11 +32,12 @@ git clone https://github.com/imsotodev/livo-prueba-tecnica.git
 ```bash
 cd livo-prueba-tecnica
 ```
+> disclaimer: Por defecto se trabajoó con `pnpm` en este proyecto para usar otro gestor de paquetes, elimina el `pnpm-lock.yaml` y sigue los pasos.
 3. Instala dependencias
 ```bash
-pnpm install
+pnpm install o npm install
 ```
 1. Ejecuta en modo desarrollo
 ```bash
-pnpm run dev
+pnpm run dev o npm run dev
 ```
