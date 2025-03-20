@@ -14,8 +14,6 @@ function ProductItem({ product }: props) {
   const price = product.price.toFixed(2);
   const partPrice = (product.price / 6).toFixed(2);
 
-  console.log(product.special_price);
-
   const handleAddToCart = () => {
     addToCart(product.sku);
   };
@@ -40,7 +38,7 @@ function ProductItem({ product }: props) {
           </div>
         </div>
         <div>
-          <ProductImages images={product.images} />
+          <ProductImages images={product?.images} />
         </div>
         <ProductColors color1={color1} color2={color2} />
       </div>

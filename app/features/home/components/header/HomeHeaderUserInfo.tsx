@@ -24,7 +24,9 @@ function HomeHeaderUserInfo() {
         <div className="flex items-center gap-2">
           <span className="text-zinc-500">Loja:</span>
           <span className="font-semibold text-zinc-600">{user?.store}</span>
-          <ArrowsSVG />
+          <div className="w-3 rotate-90">
+            <ArrowsSVG />
+          </div>
         </div>
       </div>
       {show && (

@@ -5,7 +5,7 @@ function ArrowsSVG() {
       data-name="Capa 2"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 25 23.76"
-      className="size-3 rotate-90"
+      className="w-full"
     >
       <g id="Capa_1-2" data-name="Capa 1">
         <g>
