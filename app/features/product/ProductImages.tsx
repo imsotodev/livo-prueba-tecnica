@@ -13,7 +13,7 @@ function ProductImages({ images }: Props) {
     side?.image?.image ??
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO5kCepNdhZvDKJtmPAIWnloSdTal7N1CQaA&s";
   return (
-    <div draggable={false} className="group relative cursor-crosshair select-none">
+    <div draggable={false} className="group relative cursor-crosshair select-none flex items-center justify-center">
       <img
         draggable={false}
         loading="lazy"

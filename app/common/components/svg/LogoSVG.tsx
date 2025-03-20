@@ -1,7 +1,7 @@
 function LogoSVG() {
   return (
     <svg
-      className="w-25"
+      className="w-20"
       id="Capa_2"
       data-name="Capa 2"
       xmlns="http://www.w3.org/2000/svg"

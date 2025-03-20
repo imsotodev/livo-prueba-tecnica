@@ -18,9 +18,9 @@ function HomeHeaderUserInfo() {
         />
         <div className="size-3 absolute bottom-0.5 right-0.5 rounded-full border-2 border-white bg-green-500" />
       </button>
-      <div className="flex flex-col items-start text-sm">
+      <div className="flex flex-col items-start text-sm leading-4">
         <span className="font-semibold">{user?.full_name}</span>
-        <span className="font-light text-primary">{user?.role.name}</span>
+        <span className="font-light text-xs text-primary">{user?.role.name}</span>
         <div className="flex items-center gap-2">
           <span className="text-zinc-500">Loja:</span>
           <span className="font-semibold text-zinc-600">{user?.store}</span>
