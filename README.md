@@ -37,7 +37,14 @@ cd livo-prueba-tecnica
 ```bash
 pnpm install o npm install
 ```
-1. Ejecuta en modo desarrollo
+4. Configurar variable de entorno, creamos el archivo `.env` y agregamos lo siguiente.
+> no incluir `/` al final de la url
+```bash
+🔴 VITE_API="http://myendpoint.com/"
+🟢 VITE_API="http://myendpoint.com"
+```
+
+5. Ejecuta en modo desarrollo
 ```bash
 pnpm run dev o npm run dev
 ```
